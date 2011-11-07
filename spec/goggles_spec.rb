@@ -2,9 +2,10 @@ require "rubygems"
 require "rspec"
 require "watir-webdriver"
 
-BOOKMARKLET = "javascript:(function(){var script=document.createElement('script');script.src='http://localhost:8000/webxray.js';script.className='webxray';document.head.appendChild(script);})();"
+require "bookmarklet"
 
-describe "X-Ray Goggles" do 
+
+describe "X-Ray Goggles (#{WEBXRAY_URL})" do 
 
   before(:all) { @browser = Watir::Browser.new :firefox }
   after(:all)  { @browser.close }
