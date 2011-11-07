@@ -38,3 +38,8 @@ or more concisely:
 
 See `rspec -h` for more formatters.
 
+## To do
+
+ * Moar tests!
+ * It would be nice to easily control where the bookmarklet points (i.e. DEV vs. production goggles)
+ * Option to run headlessly
