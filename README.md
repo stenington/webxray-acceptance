@@ -20,8 +20,8 @@ Assuming you have `ruby` and `rubygems` installed, run:
 
 The easiest way to get and run this test suite is:
 
-    $ git clone <this project> <dest>
-    $ cd <dest>
+    $ git clone git://github.com/stenington/webxray-acceptance.git
+    $ cd ./webxray-acceptance
     $ rspec
 
 By default, `rspec` looks for `./spec/**/*_spec.rb` and runs all the files it finds.
