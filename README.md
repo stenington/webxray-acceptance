@@ -13,11 +13,13 @@ ability to run Watir-WebDriver (although a tool like [Cucumber](http://cukes.inf
 ### Install rspec
 
 Assuming you have `ruby` and `rubygems` installed, run:
+
     $ [sudo] gem install rspec
 
 ### Using rspec
 
 The easiest way to get and run this test suite is:
+
     $ git clone <this project> <dest>
     $ cd <dest>
     $ rspec
@@ -27,8 +29,11 @@ By default, `rspec` looks for `./spec/**/*_spec.rb` and runs all the files it fi
 ### RSpec output formatting
 
 A nice alternative output can be specified like so:
+
     $ rspec --format documentation  
+
 or more concisely:
+
     $ rspec -f 
 
 See `rspec -h` for more formatters.
