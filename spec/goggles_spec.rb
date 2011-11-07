@@ -38,6 +38,27 @@ describe "X-Ray Goggles" do
       browser.body.send_keys 'h' 
       browser.div(:text => /This help reference/i).should be_visible
     end
+
+    describe "overlay" do
+      
+      let(:overlay) { 
+        # Bug? Doesn't seem to find the div without both classes...
+        browser.div(:class => 'webxray-base webxray-overlay') 
+      }
+
+      context "when link moused-over" do
+
+        before(:each) { 
+          browser.links.first.fire_event 'onmouseover' 
+        }
+
+        subject { overlay }
+
+        it { should exist }
+        it { should be_visible }
+        specify { overlay.text.should include "<a>" }
+        specify { overlay.text.should include "</a>" }
+      end
+    end
   end
-    
 end

@@ -43,3 +43,6 @@ See `rspec -h` for more formatters.
  * Moar tests!
  * It would be nice to easily control where the bookmarklet points (i.e. DEV vs. production goggles)
  * Option to run headlessly
+ * RSpec-isms
+  * RSpec has lots of utilities that increase conciseness and expressivity&mdash;explore them!
+ * Move from testing on hackasaurus.org to a checked-in page
