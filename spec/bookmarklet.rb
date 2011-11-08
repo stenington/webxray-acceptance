@@ -20,3 +20,5 @@ else
 end
 
 BOOKMARKLET = "javascript:(function(){var script=document.createElement('script');script.src='#{WEBXRAY_URL}';script.className='webxray';document.head.appendChild(script);})();"
+
+puts "Running against Web X-Ray Goggles at #{WEBXRAY_URL}"
