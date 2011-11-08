@@ -1,7 +1,4 @@
 require "rspec"
-require "watir-webdriver"
-
-require "bookmarklet"
 require "shared"
 
 

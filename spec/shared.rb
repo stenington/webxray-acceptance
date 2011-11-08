@@ -1,4 +1,5 @@
 require 'watir-webdriver'
+require 'bookmarklet'
 require 'goggles_helper'
 
 shared_context "with a browser open" do 

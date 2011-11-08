@@ -1,6 +1,4 @@
 class GogglesHelper
-  attr_accessor :browser
-
   def initialize(browser)
     @browser = browser
   end
@@ -15,6 +13,10 @@ class GogglesHelper
   end
 
   def help
-    browser.div(:text => /This help reference/i)
+    @browser.div(:text => /This help reference/i)
+  end
+
+  def remix_panel
+    @browser.frame(:class => 'webxray-base')
   end
 end

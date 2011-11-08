@@ -1,6 +1,5 @@
 require "rspec"
 require "watir-webdriver"
-
 require "bookmarklet"
 require "shared"
 
@@ -32,6 +31,14 @@ describe "X-Ray Goggles control" do
     it "should show help on H" do
       browser.body.send_keys 'h' 
       goggles.help.should be_visible
+    end
+
+    it "should open remix panel on R" do
+      remixee = browser.ps.first
+      remixee.fire_event 'onmouseover'
+      browser.body.send_keys 'r'
+      goggles.remix_panel.wait_until_present
+      goggles.remix_panel.should be_visible
     end
 
   end
