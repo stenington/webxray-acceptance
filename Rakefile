@@ -1,10 +1,10 @@
-# Rakefile to help simplify running tests for the forgetful and/or lazy
+# Rakefile 
+# to help simplify running tests for the forgetful and/or lazy
 #
 # rake -T to see the target options
 #
 
 require 'rake'
-require 'rubygems'
 require 'rspec/core/rake_task'
 
 DEFAULT_RSPEC_OPTS = ["--format documentation"]
@@ -20,14 +20,14 @@ end
 task :local => :local_env
 
 
-task :production_env do
+task :prod_env do
   ENV['WEBXRAY'] = 'production'
 end
 
 desc "Run suite against production goggles"
-RSpec::Core::RakeTask.new(:production) do |t|
+RSpec::Core::RakeTask.new(:prod) do |t|
   t.rspec_opts = DEFAULT_RSPEC_OPTS
 end
-task :production => :production_env
+task :prod => :prod_env
 
 

@@ -38,6 +38,11 @@ or more concisely:
 
 See `rspec -h` for more formatters.
 
+### Rakefile
+
+The project `Rakefile` also defines some shortcuts and defaults for running the suite.
+`rake -T` will list the available targets.
+
 ## To do
 
  * Moar tests!
